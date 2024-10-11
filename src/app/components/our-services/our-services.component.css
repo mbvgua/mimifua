@@ -105,35 +105,3 @@
     }
     
 } 
-
-.radaa{
-    background-color: red;
-}
-
-.text-center{
-    text-align: center;
-  }
-
-  .text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .font-medium{
-    font-weight: 500;
-  }
-  
-  .font-normal{
-    font-weight: 400;
-  }
-
-  .text-center{
-    text-align: center;
-  }
-
-  .text-body-color{
-    --tw-text-opacity: 1;
-    color: rgb(99 115 129 / var(--tw-text-opacity));
-  }
-
-/* ======================================== */

@@ -268,6 +268,19 @@
         bottom: 3%;
         width: 3.625rem;
     }
+
+    .blockify{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        padding: .7rem;
+        justify-content: center;
+    }
+
+    .blockify-items{
+        margin-left: .4rem !important;
+        margin-top: .4rem !important;
+    }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 768px) {
@@ -349,6 +362,7 @@
         display:none;
         visibility:none;
     }
+    
 }
 
 @media only screen and (max-width:640px) {
