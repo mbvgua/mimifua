@@ -1,3 +1,69 @@
+<!-- if making navbar sticky. copy this design
+  <main class="dark:bg-gray-800 bg-white relative overflow-hidden h-screen">
+  <header class="h-24 sm:h-32 flex items-center z-30 w-full border-2">
+      <div class="container mx-auto px-6 flex items-center justify-between">
+          <div class="uppercase text-gray-800 dark:text-white font-black text-3xl">
+              Watch.ME
+          </div>
+          <div class="flex items-center">
+              <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
+                  <a href="#" class="py-2 px-6 flex">
+                      Home
+                  </a>
+                  <a href="#" class="py-2 px-6 flex">
+                      Watch
+                  </a>
+                  <a href="#" class="py-2 px-6 flex">
+                      Product
+                  </a>
+                  <a href="#" class="py-2 px-6 flex">
+                      Contact
+                  </a>
+                  <a href="#" class="py-2 px-6 flex">
+                      Carrer
+                  </a>
+              </nav>
+              <button class="lg:hidden flex flex-col ml-4">
+                  <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                  </span>
+                  <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                  </span>
+                  <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                  </span>
+              </button>
+          </div>
+      </div>
+  </header>
+  <div class="bg-white dark:bg-gray-800 flex relative z-20 items-center overflow-hidden">
+      <div class="container mx-auto px-6 flex relative py-16">
+          <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative z-20">
+              <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
+              </span>
+              <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
+                  Be on
+                  <span class="text-5xl sm:text-7xl">
+                      Time
+                  </span>
+              </h1>
+              <p class="text-sm sm:text-base text-gray-700 dark:text-white">
+                  Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
+              </p>
+              <div class="flex mt-8">
+                  <a href="#" class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-400">
+                      Get started
+                  </a>
+                  <a href="#" class="uppercase py-2 px-4 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-500 hover:text-white text-md">
+                      Read more
+                  </a>
+              </div>
+          </div>
+          <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
+              <img src="https://www.tailwind-kit.com/images/object/10.png" class="max-w-xs md:max-w-sm m-auto"/>
+          </div>
+      </div>
+  </div>
+</main> -->
+
 <!-- hero section -->
 <section class="hero text-gray-600 body-font relative ">
   <div class="z-1">
@@ -297,7 +363,7 @@
     </div>  
   </div>
 
-    <div class="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
+    <div class="container mx-auto z-10 flex px-5 py-10 md:flex-row flex-col items-center">
       <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
         <h1 class="title-font title-font-plus font-extrabold text-3xl mb-4 font-medium font-extrabold text-gray-900 sm:text-4xl">World class
           <br class="hidden lg:inline-block"/>
@@ -1054,6 +1120,7 @@
 </section>
 
 
+
   <!-- testimonials -->
   <section class="bg-gray-100 text-gray-600 body-font relative">
     <img src="assets/shape-06.svg" alt="Shape" class="yellow-half-circle-background" />
@@ -1113,6 +1180,182 @@
         -->
         </div>
       </div>
+
+    <!-- slider carousel -->
+  <!-- <section class="bg-white">
+    <div class="w-full mx-auto max-w-xl flex flex-col justify-center py-24 relative p-8">
+    <div class="prose text-gray-500 prose-sm prose-headings:font-normal prose-headings:text-xl">
+      <div>
+      <h1>Custom Carousel</h1>
+    
+      </div>
+    </div>
+    <div class="mt-6 border-t pt-12 max-w-xl mx-auto">
+      <div class="flex flex-col w-full" x-data="{
+          skip: 1,
+          atBeginning: false,
+          atEnd: false,
+          next() {
+              this.to((current, offset) => current + (offset * this.skip))
+          },
+          prev() {
+              this.to((current, offset) => current - (offset * this.skip))
+          },
+          to(strategy) {
+              let slider = this.$refs.slider
+              let current = slider.scrollLeft
+              let offset = slider.firstElementChild.getBoundingClientRect().width
+              slider.scrollTo({ left: strategy(current, offset), behavior: 'smooth' })
+          },
+          focusableWhenVisible: {
+              'x-intersect:enter'() {
+                  this.$el.removeAttribute('tabindex')
+              },
+              'x-intersect:leave'() {
+                  this.$el.setAttribute('tabindex', '-1')
+              },
+          },
+          disableNextAndPreviousButtons: {
+              'x-intersect:enter.threshold.05'() {
+                  let slideEls = this.$el.parentElement.children
+                  // If this is the first slide.
+                  if (slideEls[0] === this.$el) {
+                      this.atBeginning = true
+                  // If this is the last slide.
+                  } else if (slideEls[slideEls.length-1] === this.$el) {
+                      this.atEnd = true
+                  }
+              },
+              'x-intersect:leave.threshold.05'() {
+                  let slideEls = this.$el.parentElement.children
+                  // If this is the first slide.
+                  if (slideEls[0] === this.$el) {
+                      this.atBeginning = false
+                  // If this is the last slide.
+                  } else if (slideEls[slideEls.length-1] === this.$el) {
+                      this.atEnd = false
+                  }
+              },
+          },
+      }">
+      <div class="flex flex-col w-full" aria-labelledby="carousel-label" role="region" tabindex="0" x-on:keydown.left="prev" x-on:keydown.right="next">
+        <h2 class="sr-only" hidden="" id="carousel-label">
+        Carousel
+        </h2> <span class="sr-only" hidden="" id="carousel-content-label">Carousel</span>
+        <div class="items-center justify-end inline-flex lg:px-2 space-x-2"> <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white opacity-50" :class="{ 'opacity-50 ': atBeginning }" :aria-disabled="atBeginning" :tabindex="atEnd ? -1 : 0" x-on:click="prev" tabindex="0" aria-disabled="true"><span aria-hidden="true" class="mx-auto">
+          ←
+          </span><span class="sr-only">Skip to previous slide page</span></button> <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white" :class="{ 'opacity-50 ': atEnd }" :aria-disabled="atEnd" :tabindex="atEnd ? -1 : 0" x-on:click="next" tabindex="0"><span aria-hidden="true" class="mx-auto">
+          →
+          </span><span class="sr-only">Skip to next slide page</span></button> </div>
+        <ul class="flex gap-3 overflow-x-scroll mt-4 scrollbar-hide snap-mandatory snap-x w-full rounded-2xl" role="listbox" aria-labelledby="carousel-content-label" tabindex="0" x-ref="slider">
+
+        <li class="items-center justify-center w-full flex flex-col shrink-0 snap-start h-full p-8 rounded-2xl lg:p-10 bg-gray-100" role="option" x-bind="disableNextAndPreviousButtons">
+          <figure>
+          <div class="max-w-2xl">
+            <div class="flex flex-col gap-12">
+            <p class="text-base text-gray-900 font-display text-balance">
+              "I've been using this services for years, and they
+              consistently exceed my expectations. The support team is
+              fantastic! "
+            </p>
+            <div class="block flex-shrink-0">
+              <div class="flex items-center">
+              <div> <img class="inline-block h-9 w-9 rounded-full object-cover object-center" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&amp;w=2960&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-700">
+                Pepe Madrid
+                </p>
+                <p class="text-xs font-medium text-gray-500">
+                CEO of Something INC
+                </p>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </figure>
+        </li>
+        <li class="items-center justify-center w-full flex flex-col shrink-0 snap-start h-full p-8 rounded-2xl lg:p-10 bg-gray-100" role="option" x-bind="disableNextAndPreviousButtons">
+          <figure>
+          <div class="max-w-2xl">
+            <div class="flex flex-col gap-12">
+            <p class="text-base text-gray-900 font-display text-balance">
+              "The financial solutions they offer are top-notch. I've
+              seen significant growth in my investments since I
+              started using their platform. "
+            </p>
+            <div class="block flex-shrink-0">
+              <div class="flex items-center">
+              <div> <img class="inline-block h-9 w-9 rounded-full object-cover object-center" src="https://alfred.lexingtonthemes.com/avatar1.png" alt=""> </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-700">
+                Michael Andreuzza
+                </p>
+                <p class="text-xs font-medium text-gray-500">
+                CEO of Something INC
+                </p>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </figure>
+        </li>
+        <li class="items-center justify-center w-full flex flex-col shrink-0 snap-start h-full p-8 rounded-2xl lg:p-10 bg-gray-100" role="option" x-bind="disableNextAndPreviousButtons">
+          <figure>
+          <div class="max-w-2xl">
+            <div class="flex flex-col gap-12">
+            <p class="text-base text-gray-900 font-display text-balance">
+              "Their customer service is unparalleled. They really go
+              the extra mile to ensure customer satisfaction. "
+            </p>
+            <div class="block flex-shrink-0">
+              <div class="flex items-center">
+              <div> <img class="inline-block h-9 w-9 rounded-full object-cover object-center" src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-700">
+                Fernando Pio
+                </p>
+                <p class="text-xs font-medium text-gray-500">
+                CEO of Something INC
+                </p>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </figure>
+        </li>
+        <li class="items-center justify-center w-full flex flex-col shrink-0 snap-start h-full p-8 rounded-2xl lg:p-10 bg-gray-100" role="option" x-bind="disableNextAndPreviousButtons">
+          <figure>
+          <div class="p-4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-200 p-8 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-7 h-7 text-sky-400 mb-5" viewBox="0 0 975.036 975.036">
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+              </svg>
+              <p class="leading-relaxed mb-6">Synth chartreuse iPhone lomo cray raw denim brunch everyday carry neutra before they sold out fixie 90's microdosing. Tacos pinterest fanny pack venmo, post-ironic heirloom try-hard pabst authentic iceland.</p>
+              <a class="inline-flex items-center">
+                <img alt="testimonial" src="https://dummyimage.com/107x107" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                <span class="flex-grow flex flex-col pl-4">
+                  <span class="title-font font-bold text-gray-900">Alper Kamu</span>
+                  <span class="custom-spacing font-bold text-sm text-sky-500">DESIGNER</span>
+                </span>
+              </a>            
+            </div>
+          </div>
+          </figure>
+        </li>
+        
+
+        </ul>
+      </div>
+      </div> 
+      
+    </div>
+    </div>
+  </section> 
+  -->
+   
     </div>
   </section>
 
@@ -1120,7 +1363,7 @@
 <app-faqs></app-faqs>
 
 <!-- our location -->
-<section class="mb-32">
+<!-- <section class="mb-32">
   <div id="map" class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
@@ -1266,5 +1509,7 @@
     </div>
   </div>
 </section>
+ -->
+
 <!-- import the footer -->
 <app-footer></app-footer>
