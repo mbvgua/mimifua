@@ -39,6 +39,11 @@
         font-size: 1.4rem;
     }
 
+    .responsive-small-screen{
+        display: none;
+        visibility: hidden;
+    }
+
 }
 
 @media only screen and (min-width: 640px) and (max-width: 768px) {
