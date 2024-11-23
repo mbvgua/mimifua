@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* shall contain all the global app styling */
+:root{
+    /* colours */
+    --primary-colour:hsl(179, 81%, 36%);    
+    --secondary-colour:hsl(179, 43%, 70%);    
+    --black:hsl(0, 0%, 0%);    
+    --white:hsl(0, 0%, 100%);  
+    --gray:hsl(0, 0%, 41%);
+    
+    /* fonts */
+    --lower-case-font:18px;
+    --upper-case-font:25px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--lower-case-font);
+}
+
+/* .main-container{
+    width: 100%;
+} */
