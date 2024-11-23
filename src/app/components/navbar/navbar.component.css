@@ -1,0 +1,6 @@
+
+.main-segment .menu-list li a{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: var(--lower-case-font);
+}
