@@ -2,5 +2,55 @@
 .main-segment .menu-list li a{
     text-transform: capitalize;
     font-weight: 600;
-    font-size: var(--lower-case-font);
 }
+
+
+.menu-items{
+    font-size: larger;
+    text-transform: capitalize;
+}
+
+/* responsiveness for smaller screens */
+@media only screen and (max-width: 1280px) {
+/* large screens -> desktops */
+
+    .main-logo{
+        font-size: x-large;
+        font-weight: bold;
+        font-weight: 600;
+    }
+  
+}
+
+  
+   
+
+@media only screen and (max-width: 640px) {
+/* small screens => normal phones */
+
+    .main-logo{
+        font-size: medium;
+        font-weight: 600;
+    }
+
+    .menu-items{
+        text-transform: capitalize;
+        font-size: small;
+        border: 0;
+    }
+
+}
+
+
+/* @media only screen and (max-width: 1280px) {
+    xl screens => tv sets
+}
+@media only screen and (max-width: 1024px) {
+    big screens => desktops
+}
+@media only screen and (max-width: 640px) {
+    medium screens => tablets
+}
+@media only screen and (max-width: 640px) {
+    small screens => normal phones
+} */
