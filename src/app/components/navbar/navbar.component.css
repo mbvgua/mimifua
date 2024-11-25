@@ -1,17 +1,10 @@
-
-.main-segment .menu-list li a{
-    text-transform: capitalize;
-    font-weight: 600;
-}
-
-
 .menu-items{
     font-size: larger;
     text-transform: capitalize;
 }
 
 /* responsiveness for smaller screens */
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 640px) {
 /* large screens -> desktops */
 
     .main-logo{
@@ -42,15 +35,19 @@
 }
 
 
-/* @media only screen and (max-width: 1280px) {
+/* 
+@media only screen and (min-width: 1024px) {
     xl screens => tv sets
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     big screens => desktops
 }
-@media only screen and (max-width: 640px) {
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
     medium screens => tablets
 }
-@media only screen and (max-width: 640px) {
-    small screens => normal phones
-} */
+
+@media only screen and (max-width:640px) {
+    small screens => normal phones  
+}  */

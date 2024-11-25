@@ -18,6 +18,9 @@
     /* fonts */
     --lower-case-font:18px;
     --upper-case-font:25px;
+
+    /* animation transition */
+    --trans-02: all 0.2s ease;
 }
 
 *{
