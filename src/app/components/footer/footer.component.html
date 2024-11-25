@@ -1,20 +1,38 @@
 <!-- subscribe -->
-<section class="text-gray-600 body-font">
+<section class="text-gray-600 body-font bg-gray-100">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep.</p>
+      <h1 class="title-font-plus sm:text-3xl text-2xl font-extrabold title-font mb-4 text-gray-900"><span class="title-highlight text-sky-400">Join </span>Us!</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base font-medium">Subscribe to our newsletter and get frequent updates blah blah. Franzen you probably haven't heard of them man bun deep.</p>
     </div>
     <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
       <div class="relative flex-grow w-full">
-        <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
-        <input type="text" id="full-name" name="full-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <!-- <label for="name" class="leading-7 text-sm text-gray-600">Full Name</label> -->
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your Name"
+          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
       <div class="relative flex-grow w-full">
-        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-        <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <!-- <label for="email" class="leading-7 text-sm text-gray-600">Email</label> -->
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Your email"
+          class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
-      <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+
+      <div class="flex justify-center">
+        <button 
+          class="hero-button inline-flex text-white hover:font-extrabold bg-sky-400 border-0 py-2 px-6 focus:outline-none hover:shadow-sky-200 hover:shadow-lg rounded text-lg">
+          Subscribe
+          <span class="ml-2">&#8594;</span>
+        </button>
+      </div>
+
     </div>
   </div>
 </section>
@@ -22,7 +40,8 @@
 
 <!-- footer section -->
 <footer class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  <!-- top section -->
+  <div class=" container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -103,7 +122,14 @@
       </div>
     </div>
   </div>
-  <div class="bg-gray-100">
+
+  <!-- line break -->
+  <div class="flex mt-6 justify-center">
+    <div class=" bg-sky-400 w-64 h-1 rounded-full inline-flex"></div>
+  </div>
+
+  <!-- bottom section -->
+  <div class="bg-gray-100  ">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
       <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">!knyttneve</a>
