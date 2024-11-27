@@ -1,6 +1,15 @@
 .menu-items{
-    font-size: larger;
+    /* font-size: larger; */
     text-transform: capitalize;
+}
+
+.active{
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+    text-decoration-thickness: .1rem;
+    /* text-decoration-style: wavy,solid,double,dotted,dashed; */
+    text-transform: capitalize;
+    color: var(--black);
 }
 
 /* responsiveness for smaller screens */

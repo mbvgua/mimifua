@@ -1,0 +1,113 @@
+
+/* letter-spacing: .1px; */
+.hero-button{
+    /* background-color: var(--primary-colour); */
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.hero-button:hover{
+    font-weight: 600;
+    transform: scale(1);
+    transition: var(--trans-02);
+    /* weka kale ka gradient animation. on angular */
+}
+
+.custom-spacing{
+    letter-spacing: .1rem;
+}
+
+
+.guarantee-title{
+    font-size: large;
+    text-transform: capitalize;
+}
+
+.guarantee-border{
+    border:1px solid;
+}
+
+.radaa{
+    background-color: red;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    /* xl screens => tv sets */
+    .title-font-plus{
+        font-size: 3rem;
+        font-weight: bolder;
+        color: var(--black);
+    }
+    
+    .title-highlight{
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+    
+    .subtitle-font{
+        font-size: 1.4rem;
+    }
+
+    .mini-title{
+        font-size: medium;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* big screens => desktops */
+    .title-font-plus{
+        font-size: 2.8rem;
+        font-weight: bolder;
+        color: var(--black);
+    }
+    
+    .title-highlight{
+        font-size: 2.8rem;
+        font-weight: bolder;
+    }
+    
+    .subtitle-font{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    /* medium screens => tablets */
+    .title-font-plus{
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--black);
+        line-break: loose;
+    }
+    
+    .title-highlight{
+        font-size: 2.5rem;
+        font-weight: bold;
+        /* color: var(--primary-colour); */
+    }
+    
+    .subtitle-font{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    /* small screens => normal phones */
+    .title-font-plus{
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: var(--black);
+    }
+    
+    .title-highlight{
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+
+    .subtitle-font{
+        font-size: 1.2rem;
+    }
+    
+} 
