@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "web-frontend": {
+    "MimiFua": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/web-frontend",
+            "outputPath": "dist/MimiFua",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -24,7 +24,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -59,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "web-frontend:build:production"
+              "buildTarget": "MimiFua:build:production"
             },
             "development": {
-              "buildTarget": "web-frontend:build:development"
+              "buildTarget": "MimiFua:build:development"
             }
           },
           "defaultConfiguration": "development"
