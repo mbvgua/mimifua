@@ -9,8 +9,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     FooterComponent,
     FaqsComponent,
-    RouterModule
-  ],
+    RouterModule,
+],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
