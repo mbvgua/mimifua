@@ -43,7 +43,7 @@
 }
 
 
-  .background-triangle-full{
+.background-triangle-full{
     animation: ud-rotating 30s linear infinite;
     position: absolute;
     left: 10%;
@@ -116,5 +116,312 @@
     width: 3.625rem;
 }
 
+@media only screen and (min-width: 1024px) {
+    /* xl screens => tv sets */
+
+    .background-triangle-full{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        left: 10%;
+        top: 90%;    
+    }
+
+    .background-triangle-hollow{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+
+    .background-circle-hollow{
+        position: absolute;
+        left: 20%;
+        top: 5%;
+    }
+
+    .waterflow-center-background{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .waterflow-bottom-background{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-right-background{
+        top: 0px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .waterflow-left-background{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-mini-background{
+        position: absolute;
+        top: 40%;
+        right: 40%;
+    }
+
+    .blue-half-circle-background{
+        position: absolute;
+        z-index: 0;
+        bottom:10%;
+        right: 5%;
+        width: 6.25rem;
+    }
+
+    .yellow-half-circle-background{
+        position: absolute;
+        top: 5%;
+        left: 3%;
+    }
+
+    .rotating-background-triangle{
+        animation: ud-rotating 30s linear infinite;
+        position:absolute;
+        left: 3%;
+        bottom: 3%;
+        width: 3.625rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* big screens => desktops */
+
+    .background-triangle-full{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        left: 10%;
+        top: 90%;    
+    }
+
+    .background-triangle-hollow{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+
+    .background-circle-hollow{
+        position: absolute;
+        left: 20%;
+        top: 5%;
+    }
+
+    .waterflow-center-background{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .waterflow-bottom-background{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-right-background{
+        top: 0px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .waterflow-left-background{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-mini-background{
+        position: absolute;
+        top: 40%;
+        right: 40%;
+    }
+
+    .blue-half-circle-background{
+        position: absolute;
+        z-index: 0;
+        bottom:10%;
+        right: 5%;
+        width: 6.25rem;
+    }
+
+    .yellow-half-circle-background{
+        position: absolute;
+        top: 5%;
+        left: 3%;
+    }
+
+    .rotating-background-triangle{
+        animation: ud-rotating 30s linear infinite;
+        position:absolute;
+        left: 3%;
+        bottom: 3%;
+        width: 3.625rem;
+    }
+
+    .blockify{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        padding: .7rem;
+        justify-content: center;
+    }
+
+    .blockify-items{
+        margin-left: .4rem !important;
+        margin-top: .4rem !important;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+    /* medium screens => tablets */
+
+    .background-triangle-full{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        left: 10%;
+        top: 90%;    
+    }
+
+    .background-triangle-hollow{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+
+    .background-circle-hollow{
+        position: absolute;
+        left: 20%;
+        top: 5%;
+    }
+
+    .waterflow-center-background{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .waterflow-bottom-background{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-right-background{
+        top: 0px;
+        position: absolute;
+        right: 0px;
+    }
+
+    .waterflow-left-background{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    .waterflow-mini-background{
+        position: absolute;
+        top: 40%;
+        right: 40%;
+    }
+
+    .blue-half-circle-background{
+        position: absolute;
+        z-index: 0;
+        bottom:10%;
+        right: 5%;
+        width: 6.25rem;
+    }
+
+    .yellow-half-circle-background{
+        position: absolute;
+        top: 5%;
+        left: 3%;
+    }
+
+    .rotating-background-triangle{
+        animation: ud-rotating 30s linear infinite;
+        position:absolute;
+        right: 5%;
+        bottom: 3%;
+        width: 3rem;
+    }
+    .responsive-small-screen{
+        display:none;
+        visibility:none;
+    }
+    
+}
+
+@media only screen and (max-width:640px) {
+    /* small screens => normal phones   */
+
+    .background-triangle-full{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        right: 3%;
+        top: 90%;    
+    }
+
+    .background-triangle-hollow{
+        animation: ud-rotating 30s linear infinite;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+
+    .background-circle-hollow{
+        left: 10%;
+        top: 1%;
+    }
+
+    .waterflow-mini-background{
+        display: none;
+    }
+
+    .blue-half-circle-background{
+        position: absolute;
+        bottom:2%;
+        right: 3%;
+        width: 5rem;
+    }
+
+
+    .rotating-background-triangle{
+        animation: ud-rotating 30s linear infinite;
+        position:absolute;
+        width: 2.5rem;
+    }
+    .responsive-small-screen{
+        display:none;
+        visibility:none;
+    }
+
+    .blockify{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        padding: .7rem;
+        justify-content: center;
+    }
+
+    .blockify-items{
+        margin-left: .4rem !important;
+        margin-top: .4rem !important;
+    }
+}
 
 
