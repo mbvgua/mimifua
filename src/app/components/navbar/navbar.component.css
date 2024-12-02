@@ -1,3 +1,9 @@
+
+.logo-top{
+    width:442px;
+    height:100px;
+}
+
 .menu-items{
     /* font-size: larger; */
     text-transform: capitalize;
@@ -10,6 +16,10 @@
     /* text-decoration-style: wavy,solid,double,dotted,dashed; */
     text-transform: capitalize;
     color: var(--black);
+}
+
+.transition-bg {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -40,6 +50,11 @@
         text-transform: capitalize;
         font-size: small;
         border: 0;
+    }
+
+    .push-item-left{
+        left: 0;
+        position: absolute;
     }
 
 }
