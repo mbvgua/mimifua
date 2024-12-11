@@ -312,7 +312,7 @@
         <br class="hidden lg:inline-block">at your convenience
       </h1>
     <p class="subtitle-font font-medium mt-4 py-2 text-gray-600  leading-relaxed sm:max-w-md md:max-w-3xl">
-        Welcome to MimiFua! The cleanest Laundromat in Kenya, where we are revolutionizing
+        Welcome to MimiFua, the cleanest laundromat in Kenya! Here we are revolutionizing
         the laundry game, one client at a time!
       </p>
       <div class="flex justify-center">
@@ -1121,7 +1121,7 @@
   
     </div>
   </div>
-  <div class="mt-6 border-t pt-12 max-w-xl mx-auto">
+  <div class="mt-6 border-t pt-12 max-w-xl radaa mx-auto">
     <div class="flex flex-col w-full" x-data="{
         skip: 1,
         atBeginning: false,
@@ -1173,12 +1173,8 @@
       <h2 class="sr-only" hidden="" id="carousel-label">
       Carousel
       </h2> <span class="sr-only" hidden="" id="carousel-content-label">Carousel</span>
-      <div class="items-center justify-end inline-flex lg:px-2 space-x-2"> <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white opacity-50" :class="{ 'opacity-50 ': atBeginning }" :aria-disabled="atBeginning" :tabindex="atEnd ? -1 : 0" x-on:click="prev" tabindex="0" aria-disabled="true"><span aria-hidden="true" class="mx-auto">
-        ←
-        </span><span class="sr-only">Skip to previous slide page</span></button> <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white" :class="{ 'opacity-50 ': atEnd }" :aria-disabled="atEnd" :tabindex="atEnd ? -1 : 0" x-on:click="next" tabindex="0"><span aria-hidden="true" class="mx-auto">
-        →
-        </span><span class="sr-only">Skip to next slide page</span></button> </div>
-      <ul class="flex gap-3 overflow-x-scroll mt-4 scrollbar-hide snap-mandatory snap-x w-full rounded-2xl" role="listbox" aria-labelledby="carousel-content-label" tabindex="0" x-ref="slider">
+
+    <ul class="flex gap-3 overflow-x-scroll mt-4 scrollbar-hide snap-mandatory snap-x w-full rounded-2xl" role="listbox" aria-labelledby="carousel-content-label" tabindex="0" x-ref="slider">
 
       <li class="items-center justify-center w-full flex flex-col shrink-0 snap-start h-full p-8 rounded-2xl lg:p-10 bg-gray-100" role="option" x-bind="disableNextAndPreviousButtons">
         <figure>
@@ -1278,14 +1274,31 @@
       </li>
       
 
-      </ul>
+    </ul>
+
+    carousel buttons
+    <div class="items-center justify-end inline-flex lg:px-2 space-x-2">
+      <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white opacity-50" :class="{ 'opacity-50 ': atBeginning }" :aria-disabled="atBeginning" :tabindex="atEnd ? -1 : 0" x-on:click="prev" tabindex="0" aria-disabled="true">
+        <span aria-hidden="true" class="mx-auto">
+          ←
+        </span>
+        <span class="sr-only">Skip to previous slide page</span>
+      </button> 
+      <button class="bg-orange-500 hover:bg-orange-600 size-8 flex focus:bg-orange-400 rounded-full items-center text-white" :class="{ 'opacity-50 ': atEnd }" :aria-disabled="atEnd" :tabindex="atEnd ? -1 : 0" x-on:click="next" tabindex="0">
+        <span aria-hidden="true" class="mx-auto">
+          →
+        </span>
+        <span class="sr-only">Skip to next slide page</span>
+      </button>
+    </div>
+    
     </div>
     </div> 
     
   </div>
   </div>
 </section> 
-  -->
+   -->
   
 
 <!-- import the FAQs -->
