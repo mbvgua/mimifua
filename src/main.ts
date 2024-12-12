@@ -7,5 +7,6 @@ import { injectSpeedInsights } from '@vercel/speed-insights';
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
 
+// speed and traffic insights
 inject();
 injectSpeedInsights();

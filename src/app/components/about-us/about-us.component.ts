@@ -13,5 +13,6 @@ import { FooterComponent } from "../footer/footer.component";
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
+  
 
 }
