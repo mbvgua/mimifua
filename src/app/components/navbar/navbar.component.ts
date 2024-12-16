@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -10,27 +10,23 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
-  @ViewChild('hamburgerMenu', { static: true }) hamburgerMenu!: ElementRef;
-  @ViewChild('mobileMenu', { static: true }) mobileMenu!: ElementRef;
-  @ViewChild('navbar', { static: true }) navbar!: ElementRef;
+  @ViewChild('hamburgerMenu', { static: true }) hamburgerMenu!: ElementRef
+  @ViewChild('mobileMenu', { static: true }) mobileMenu!: ElementRef
+  @ViewChild('navbar', { static: true }) navbar!: ElementRef
 
-  ngOnInit() {
-    this.hamburgerMenu.nativeElement.addEventListener('click', this.toggleMenu.bind(this));
+  // scrolling position affect navbar
+  @HostListener('window:scroll',['$event'])
+  onWindowScroll(event:Event):void {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop
+    console.log('Scroll position: ',scrollPosition)
 
-    /**   trid to make the navbar transparent at first, then emerge on scroll
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        this.navbar.nativeElement.classList.add('bg-sky-600', 'shadow-lg'); // Adds dark background and shadow on scroll
-      } else {
-        this.navbar.nativeElement.classList.remove('bg-transparent','shadow-lg'); // Reverts to transparent when at top
-      }
-    });
-    */
+    if(scrollPosition == 0){
+      this.navbar.nativeElement.classList.remove('fixed' ,'absolute','inset-x-0', 'top-0', 'z-30', 'mx-auto' ,'w-full', 'max-w-screen-md','bg-sky/10' ,'py-3', 'shadow', 'backdrop-blur-lg', 'md:rounded-3xl', 'lg:max-w-screen-xl', 'md:top-3', 'lg:top-3')
+      this.navbar.nativeElement.classList.remove('sticky'); // Reverts to default when at top
+    } else if (scrollPosition > 100){
+      this.navbar.nativeElement.classList.add('fixed' ,'absolute','inset-x-0', 'top-0', 'z-30', 'mx-auto' ,'w-full', 'max-w-screen-md','bg-sky/10' ,'py-3', 'shadow', 'backdrop-blur-lg', 'md:rounded-3xl', 'lg:max-w-screen-xl', 'md:top-3'), 'lg:top-3'; // make navbar sticky and transparent on scroll
+      this.navbar.nativeElement.classList.add('sticky')
+    }
   }
-
-  toggleMenu() {
-    const menu = this.mobileMenu.nativeElement;
-    menu.classList.toggle('hidden');
-  }
-    
+      
 }
