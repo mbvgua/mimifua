@@ -57,7 +57,4 @@ export class SignupComponent implements OnInit{
     this.signUpForm.reset()
   }
 
-
-
-
 }
