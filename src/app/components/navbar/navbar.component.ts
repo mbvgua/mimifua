@@ -21,8 +21,9 @@ export class NavbarComponent {
     // console.log('Scroll position: ',scrollPosition)
 
     if(scrollPosition == 0){
+      // Reverts to default when at top
       this.navbar.nativeElement.classList.remove('fixed' ,'absolute','inset-x-0', 'top-0', 'z-30', 'mx-auto' ,'w-full', 'max-w-screen-md','bg-sky/10' ,'py-3', 'shadow', 'backdrop-blur-lg', 'md:rounded-3xl', 'lg:max-w-screen-xl', 'md:top-3', 'lg:top-3')
-      this.navbar.nativeElement.classList.remove('sticky'); // Reverts to default when at top
+      this.navbar.nativeElement.classList.remove('sticky'); 
     } else if (scrollPosition > 100){
       this.navbar.nativeElement.classList.add('fixed' ,'absolute','inset-x-0', 'top-0', 'z-30', 'mx-auto' ,'w-full', 'max-w-screen-md','bg-sky/10' ,'py-3', 'shadow', 'backdrop-blur-lg', 'md:rounded-3xl', 'lg:max-w-screen-xl', 'md:top-3', 'lg:top-3') // make navbar sticky and transparent on scroll
       this.navbar.nativeElement.classList.add('sticky')
