@@ -11,7 +11,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 To run the project with docker:
 
 ```bash
-docker pull mbvgua/mimifua-frontend:latest
 docker run -p 4200:4200 mbvgua/mimifua-frontend:latest
 ```
 
